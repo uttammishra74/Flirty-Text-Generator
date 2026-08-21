@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Server error - Flirty Text Generator. We're experiencing technical difficulties. Please try again later.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="500 - Server Error | Flirty Text Generator">
+    <meta property="og:description" content="We're experiencing technical difficulties. Please try again later.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flirtytextgenerator.com/500.html">
+    
+    <title>500 - Server Error | Flirty Text Generator</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/favicon-96x96.png">
+    <link rel="manifest" href="public/site.webmanifest">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--background-color) 0%, var(--surface-color) 100%);
+            padding: var(--spacing-md);
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--error-color);
+            line-height: 1;
+            margin-bottom: var(--spacing-md);
+            animation: shake 3s ease-in-out infinite;
+        }
+        
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px);
+            }
+            75% {
+                transform: translateX(10px);
+            }
+        }
+        
+        .error-title {
+            font-size: var(--font-size-xl);
+            color: var(--text-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .error-message {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .error-btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .error-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+        }
+        
+        .error-btn-secondary {
+            background: var(--surface-color);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .error-btn-secondary:hover {
+            background: var(--border-color);
+        }
+        
+        .server-down {
+            font-size: 60px;
+            margin-bottom: var(--spacing-md);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+        
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+            margin-top: var(--spacing-md);
+        }
+        
+        .loading-dots span {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: bounce 1.4s ease-in-out infinite;
+        }
+        
+        .loading-dots span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="server-down">🔧</div>
+            <div class="error-code">500</div>
+            <h1 class="error-title">Server Error</h1>
+            <p class="error-message">
+                Our servers are experiencing some technical difficulties right now. 
+                Don't worry, our team is already working on fixing the issue. 
+                Please check back in a few minutes.
+            </p>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="error-actions" style="margin-top: var(--spacing-lg);">
+                <a href="index.html" class="error-btn error-btn-primary">
+                    <i class="fas fa-home"></i> Go Home
+                </a>
+                <a href="javascript:location.reload()" class="error-btn error-btn-secondary">
+                    <i class="fas fa-redo"></i> Try Again
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh page after 15 seconds
+        setTimeout(() => {
+            location.reload();
+        }, 15000);
+    </script>
+</body>
+</html>

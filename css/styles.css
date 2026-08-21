@@ -187,6 +187,12 @@ input, textarea, select {
     color: var(--primary-color);
 }
 
+.logo-image {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .nav-logo i {
     font-size: var(--font-size-xl);
 }
@@ -454,6 +460,19 @@ input, textarea, select {
     align-items: center;
     justify-content: center;
     font-size: 20px;
+    overflow: hidden;
+}
+
+.chat-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.chat-logo-small {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .chat-info {
@@ -858,6 +877,133 @@ input, textarea, select {
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     border-radius: var(--radius-full);
     transition: width var(--transition-normal);
+}
+
+/* ==========================================
+   ABOUT TOOL SECTION (SEO CONTENT)
+   ========================================== */
+.about-tool {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    background-color: var(--surface-color);
+}
+
+.about-tool h2 {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-color);
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.about-content p {
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+}
+
+.about-content h3 {
+    color: var(--text-color);
+    font-size: var(--font-size-large);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.about-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ==========================================
+   FAQ SECTION
+   ========================================== */
+.faq-section {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    background-color: var(--background-color);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-color);
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--surface-color);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.faq-question {
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    background-color: var(--surface-color);
+    transition: background-color var(--transition-fast);
+}
+
+.faq-question:hover {
+    background-color: var(--border-color);
+}
+
+.faq-question h3 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    flex: 1;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform var(--transition-fast);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal), padding var(--transition-normal);
+    background-color: var(--background-color);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: var(--spacing-md);
+}
+
+.faq-answer p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* ==========================================

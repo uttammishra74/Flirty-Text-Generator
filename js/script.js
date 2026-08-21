@@ -625,6 +625,31 @@ function initSmoothScroll() {
 }
 
 // ==========================================
+// FAQ ACCORDION FUNCTIONALITY
+// ==========================================
+function initFAQAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    if (question) {
+      question.addEventListener('click', () => {
+        // Close all other FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current FAQ item
+        item.classList.toggle('active');
+      });
+    }
+  });
+}
+
+// ==========================================
 // DOM CONTENT LOADED - MAIN INITIALIZATION
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -636,6 +661,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initActiveNav();
   initSmoothScroll();
+  initFAQAccordion();
 
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", toggleDarkMode);

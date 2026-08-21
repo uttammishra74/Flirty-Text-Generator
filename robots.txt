@@ -1,0 +1,25 @@
+# robots.txt for flirtytextgenerator.com
+# This file guides search engine crawlers on what to index
+
+User-agent: *
+Allow: /
+
+# Disallow error pages from being indexed
+Disallow: /404.html
+Disallow: /500.html
+
+# Disallow any temporary or test directories
+Disallow: /temp/
+Disallow: /test/
+Disallow: /tmp/
+
+# Allow important resources
+Allow: /css/
+Allow: /js/
+Allow: /public/
+
+# Sitemap location
+Sitemap: https://flirtytextgenerator.com/sitemap.xml
+
+# Crawl delay (optional, to prevent overloading the server)
+Crawl-delay: 1
