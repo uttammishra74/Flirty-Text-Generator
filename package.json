@@ -1,0 +1,24 @@
+{
+  "name": "flirty-text-generator",
+  "version": "1.0.0",
+  "description": "AI-powered flirty text generator with secure backend API",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret": "wrangler secret put AI_API_KEY",
+    "tail": "wrangler tail"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "ai",
+    "dating",
+    "text-generator"
+  ],
+  "author": "Ayush Mishra",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

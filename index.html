@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flirty Text Generator - Craft the perfect reply in seconds with AI-powered flirty text suggestions.">
+    <title>Flirty Text Generator - Craft the Perfect Reply</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+                <span>Flirty Text Generator</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="flirty-text.html" class="nav-link">Generator</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><button class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="mesh-gradient"></div>
+            <div class="floating-hearts-container">
+                <div class="floating-heart" style="--delay: 0s; --size: 20px; --left: 10%;">❤️</div>
+                <div class="floating-heart" style="--delay: 2s; --size: 25px; --left: 20%;">💕</div>
+                <div class="floating-heart" style="--delay: 4s; --size: 18px; --left: 30%;">💗</div>
+                <div class="floating-heart" style="--delay: 1s; --size: 22px; --left: 40%;">💖</div>
+                <div class="floating-heart" style="--delay: 3s; --size: 20px; --left: 50%;">❤️</div>
+                <div class="floating-heart" style="--delay: 5s; --size: 24px; --left: 60%;">💕</div>
+                <div class="floating-heart" style="--delay: 2.5s; --size: 19px; --left: 70%;">💗</div>
+                <div class="floating-heart" style="--delay: 4.5s; --size: 21px; --left: 80%;">💖</div>
+                <div class="floating-heart" style="--delay: 1.5s; --size: 23px; --left: 90%;">❤️</div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Craft the <span class="gradient-text">Perfect Reply</span> in Seconds</h1>
+                <p>Transform your conversations with AI-powered flirty text suggestions. Be witty, confident, and effortlessly charming.</p>
+                <a href="flirty-text.html" class="cta-button pulse-button">
+                    <i class="fas fa-sparkles"></i> Start Generating
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="chat-simulator">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="chat-info">
+                            <span class="chat-name">Flirty AI Assistant</span>
+                            <span class="chat-status">Online</span>
+                        </div>
+                        <div class="chat-actions">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message received">
+                            <div class="message-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="message-content">
+                                <p>Hey! I'm just relaxing at home tonight. Maybe watching a movie.</p>
+                                <span class="message-time">Now</span>
+                            </div>
+                        </div>
+                        
+                        <div class="message ai-typing" id="aiTyping">
+                            <div class="message-avatar ai-avatar">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="message-content typing-indicator">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="message sent" id="aiResponse" style="display: none;">
+                            <div class="message-avatar ai-avatar">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="message-content">
+                                <p id="responseText">Sounds cozy! 🍿 What kind of movies are you into? I might have a few recommendations... or we could watch something together sometime? 😉</p>
+                                <span class="message-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-controls">
+                        <button class="replay-btn" id="replayChat">
+                            <i class="fas fa-redo"></i> Replay Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-prop">
+        <div class="container">
+            <h2>Why Use Flirty Text Generator?</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Save Time</h3>
+                    <p>No more staring at your phone wondering what to say. Get instant suggestions that hit the right note.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Powered</h3>
+                    <p>Our advanced AI understands context and tone to generate natural, engaging responses.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-sliders-h"></i>
+                    <h3>Customizable</h3>
+                    <p>Adjust the length, tone, and spice level to match your personality and the situation.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>For Everyone</h3>
+                    <p>Whether you're shy or experienced, our tool helps you communicate with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- See It in Action Section -->
+    <section class="demo-section">
+        <div class="container">
+            <h2>See It in Action</h2>
+            <p>Watch how our tool transforms a simple context into the perfect reply</p>
+            <div class="demo-boxes">
+                <div class="demo-box input-box">
+                    <div class="demo-header">
+                        <span>Your Context</span>
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="demo-content">
+                        <p>"I'm just relaxing at home tonight. Maybe watching a movie."</p>
+                    </div>
+                </div>
+                <div class="demo-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="demo-box output-box">
+                    <div class="demo-header">
+                        <span>Generated Reply</span>
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="demo-content">
+                        <p>"only if we're sharing a massive bucket of popcorn and you don't judge me for talking during the trailers. what movie are we watching"</p>
+                    </div>
+                    <button class="copy-btn" onclick="copyDemoText()">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Flirty Replies Section -->
+    <section class="top-replies">
+        <div class="container">
+            <h2>Top Flirty Replies Right Now</h2>
+            <p>Trending responses that are getting results</p>
+            <div class="replies-grid">
+                <div class="reply-card">
+                    <div class="reply-tone">Playful</div>
+                    <p class="reply-text">"only if you promise not to judge my terrible movie taste. what are we watching"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-card">
+                    <div class="reply-tone">Confident</div>
+                    <p class="reply-text">"only if you let me pick the movie next time. what time should i be ready"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-card">
+                    <div class="reply-tone">Witty</div>
+                    <p class="reply-text">"only if you're prepared for me to point out all the foreshadowing you missed. what movie did you have in mind"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-card">
+                    <div class="reply-tone">Romantic</div>
+                    <p class="reply-text">"only if you don't mind if i lean on your shoulder during the scary parts. what movie are we watching"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-card">
+                    <div class="reply-tone">Funny</div>
+                    <p class="reply-text">"only if you're prepared for my running commentary throughout the entire film. what movie did you have in mind"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 45%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reply-card">
+                    <div class="reply-tone">Playful</div>
+                    <p class="reply-text">"as long as there's popcorn involved. what time works for you"</p>
+                    <div class="reply-spice">
+                        <span>Spice Level:</span>
+                        <div class="spice-bar">
+                            <div class="spice-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="reviews-marquee">
+                <div class="reviews-track">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"This tool is a game-changer! I used to overthink every text, now I just let the AI work its magic. My dating life has never been better."</p>
+                        <p class="review-author">- Alex R.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Finally, something that understands context! The suggestions feel natural and not robotic. Highly recommend for anyone who struggles with texting."</p>
+                        <p class="review-author">- Sarah M.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"The spice level slider is genius! I can adjust from subtle to bold depending on who I'm talking to. Perfect tool."</p>
+                        <p class="review-author">- Jordan K.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"I was skeptical at first, but the AI really gets it. The responses are actually funny and charming, not cringey like other tools."</p>
+                        <p class="review-author">- Taylor L.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Super easy to use and the results are instant. I've gotten way more responses since using this. Worth every penny!"</p>
+                        <p class="review-author">- Chris P.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"As someone who's shy, this helped me break the ice without feeling awkward. The confidence boost is real!"</p>
+                        <p class="review-author">- Jamie T.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Report Bug</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flirty Text Generator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

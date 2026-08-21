@@ -1,0 +1,29 @@
+# Cloudflare Workers Configuration File
+# This file configures your Cloudflare Worker deployment
+
+name = "flirty-text-generator"
+main = "worker.js"
+compatibility_date = "2024-08-21"
+
+# Environment variables
+# These will be set securely in the Cloudflare dashboard
+# or via wrangler secret command
+
+[vars]
+# Environment-specific variables
+ENVIRONMENT = "production"
+
+# Secrets (don't commit actual secrets to this file)
+# Use: wrangler secret put AI_API_KEY
+# AI_API_KEY = "your-api-key-here"
+
+# Optional: Configure KV namespaces if needed
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+
+# Optional: Configure D1 databases if needed
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "flirty-text-db"
+# database_id = "your-database-id"
